@@ -92,7 +92,7 @@
                         <outlet property="emailTextField" destination="Lx2-hb-Obz" id="TgX-DX-nd5"/>
                         <outlet property="passwordTextField" destination="cpr-rA-swS" id="ThB-zK-ync"/>
                         <outlet property="profileImageView" destination="fFC-Ao-wbe" id="Koj-3b-uFz"/>
-                        <segue destination="neg-7e-KiD" kind="show" id="A51-hU-gad"/>
+                        <segue destination="neg-7e-KiD" kind="show" identifier="chat" id="A51-hU-gad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I43-YH-yIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

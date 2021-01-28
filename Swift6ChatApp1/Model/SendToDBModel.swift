@@ -8,7 +8,14 @@
 import Foundation
 import FirebaseStorage
 
+protocol SendProfileOKDelegate {
+    func sendProfileOKDelegate(url:String)
+}
+
 class sendToDBModel {
+    
+    var sendProfileOKDelegate: SendProfileOKDelegate?
+    
     init() {
         
     }
@@ -16,10 +23,10 @@ class sendToDBModel {
     func sendprofileImageData(data:Data){
         
         let image = UIImage(data: data)
-        let profileImage = image?.jpegData(compressionQuality: 0.1)
+        let profileImageData = image?.jpegData(compressionQuality: 0.1)
         let imageRef = Storage.storage().reference().child("profileImage").child("\(UUID().uuidString + String(Date().timeIntervalSince1970)).jpeg")
         
-        imageRef.putData(Data(profileImage!), metadata:nil)  {(metaData, error) in
+        imageRef.putData(Data(profileImageData!), metadata:nil)  {(metaData, error) in
             if error != nil {
                 print(error.debugDescription)
                 return
@@ -30,6 +37,7 @@ class sendToDBModel {
                     return
                 }
                 UserDefaults.standard.setValue(url?.absoluteString, forKey: "userImage")
+                self.sendProfileOKDelegate?.sendProfileOKDelegate(url: url!.absoluteString)
             }
         }
     }

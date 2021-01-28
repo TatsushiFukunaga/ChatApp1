@@ -7,24 +7,47 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    var sendToModel = sendToDBModel()
+    var urlString = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let checkModel = CheckPermission()
         checkModel.showCheckPermission()
+        sendToModel.sendProfileOKDelegate = self
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func registerButton(_ sender: Any) {
+        if emailTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true,
+           let image = profileImageView.image {
+            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                if error != nil {
+                    print(error.debugDescription)
+                    return
+                }
+                let data = image.jpegData(compressionQuality: 1.0)
+                self.sendToModel.sendprofileImageData(data: data!)
+            }
+        }
+    }
+    
+    func sendProfileOKDelegate(url: String) {
+        urlString = url
+        if urlString.isEmpty != true {
+            self.performSegue(withIdentifier: "chat", sender: nil)
+        }
     }
     
     @IBAction func tapImageView(_ sender: Any) {
