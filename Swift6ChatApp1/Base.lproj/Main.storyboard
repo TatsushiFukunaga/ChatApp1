@@ -31,7 +31,7 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NfU-MC-KwC" kind="show" id="7fX-ph-Kux"/>
+                                    <segue destination="NfU-MC-KwC" kind="show" id="fNL-bN-Urt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,7 +92,7 @@
                         <outlet property="emailTextField" destination="Lx2-hb-Obz" id="TgX-DX-nd5"/>
                         <outlet property="passwordTextField" destination="cpr-rA-swS" id="ThB-zK-ync"/>
                         <outlet property="profileImageView" destination="fFC-Ao-wbe" id="Koj-3b-uFz"/>
-                        <segue destination="neg-7e-KiD" kind="show" identifier="chat" id="A51-hU-gad"/>
+                        <segue destination="neg-7e-KiD" kind="show" identifier="chat" id="E3H-ey-Nuy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I43-YH-yIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,12 +102,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1724.6376811594205" y="78.348214285714278"/>
+            <point key="canvasLocation" x="1781" y="78"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="xDC-t2-83r">
             <objects>
-                <viewController id="zoj-Cg-J5I" sceneMemberID="viewController">
+                <viewController id="zoj-Cg-J5I" customClass="RoomViewController" customModule="Swift6ChatApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9kh-Wo-19k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,37 +133,42 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="WP8-fO-3Dk"/>
                     <connections>
-                        <segue destination="pDp-sl-M87" kind="show" id="f2w-po-cEt"/>
+                        <outlet property="tableView" destination="rTE-Zo-ul0" id="zKW-dV-VH2"/>
+                        <segue destination="pDp-sl-M87" kind="show" identifier="roomChat" id="dVN-F4-bXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7D-mf-tKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382.608695652174" y="381.69642857142856"/>
+            <point key="canvasLocation" x="3383" y="427"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="Pnj-ac-l3c">
             <objects>
-                <viewController id="pDp-sl-M87" sceneMemberID="viewController">
+                <viewController id="pDp-sl-M87" customClass="ChatViewController" customModule="Swift6ChatApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ft8-Xz-4Ex">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="roomback" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-oV-APN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="683"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEL-UR-qum">
                                 <rect key="frame" x="37" y="758" width="274" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-pZ-LQk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-pZ-LQk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="683"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cNl-VR-SbN">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cNl-VR-SbN" id="VHR-1C-vfB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -176,7 +181,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l4D-8l-cpk"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="eRw-aN-PzU"/>
                 </viewController>
@@ -187,21 +192,25 @@
         <!--Item 1-->
         <scene sceneID="Toi-Nm-T3K">
             <objects>
-                <viewController id="eqx-DX-Z1j" sceneMemberID="viewController">
+                <viewController id="eqx-DX-Z1j" customClass="ChatViewController" customModule="Swift6ChatApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vsm-iV-Ir8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E81-aL-wQb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" id="tyB-aB-ANJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="719"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E81-aL-wQb">
                                 <rect key="frame" x="0.0" y="88" width="414" height="631"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ffP-gA-qOq">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ffP-gA-qOq" id="Zd2-7u-nNX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -217,12 +226,19 @@
                                 <rect key="frame" x="308" y="764" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="send:" destination="eqx-DX-Z1j" eventType="touchUpInside" id="cFn-SV-b0O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fo9-bW-lbd"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="a3K-x8-eZJ"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="jIF-e8-8nd" id="sll-up-tzc"/>
+                        <outlet property="tableView" destination="E81-aL-wQb" id="5R2-f8-bKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brt-pa-3qh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +247,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="5tT-6j-BYO">
             <objects>
-                <tabBarController id="neg-7e-KiD" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="neg-7e-KiD" customClass="TabBarController" customModule="Swift6ChatApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fD6-wG-MXD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4SC-6g-RR9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -250,7 +266,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sQi-5n-7Xp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rEi-of-0te" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="welcomeVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rEi-of-0te" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Chq-mY-BwS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -267,7 +283,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backGround" width="1280" height="1920"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="roomback" width="1040" height="1280"/>
         <image name="send" width="64" height="64"/>
         <image name="top" width="1280" height="1920"/>
         <namedColor name="AccentColor">
@@ -284,6 +302,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

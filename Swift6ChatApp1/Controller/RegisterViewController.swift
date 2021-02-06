@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,8 +24,15 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let checkModel = CheckPermission()
         checkModel.showCheckPermission()
         sendToModel.sendProfileOKDelegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     @IBAction func registerButton(_ sender: Any) {

@@ -26,7 +26,7 @@ class sendToDBModel {
         let profileImageData = image?.jpegData(compressionQuality: 0.1)
         let imageRef = Storage.storage().reference().child("profileImage").child("\(UUID().uuidString + String(Date().timeIntervalSince1970)).jpeg")
         
-        imageRef.putData(Data(profileImageData!), metadata:nil)  {(metaData, error) in
+        imageRef.putData(profileImageData!, metadata:nil)  {(metaData, error) in
             if error != nil {
                 print(error.debugDescription)
                 return

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4305557225CE7A590001C9F2 /* roomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305557125CE7A590001C9F2 /* roomModel.swift */; };
+		4323F6A325CA84F500D8A608 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323F6A225CA84F500D8A608 /* Message.swift */; };
+		4323F6A725CAA63E00D8A608 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323F6A525CAA63D00D8A608 /* MessageCell.swift */; };
+		4323F6A825CAA63E00D8A608 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4323F6A625CAA63D00D8A608 /* MessageCell.xib */; };
 		432D593D25A43C080074DB29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D593C25A43C080074DB29 /* AppDelegate.swift */; };
 		432D593F25A43C080074DB29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D593E25A43C080074DB29 /* SceneDelegate.swift */; };
 		432D594125A43C080074DB29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D594025A43C080074DB29 /* ViewController.swift */; };
@@ -17,11 +21,18 @@
 		432D595A25A589D80074DB29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D595925A589D80074DB29 /* RegisterViewController.swift */; };
 		432D596025A58AB50074DB29 /* CheckPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D595F25A58AB50074DB29 /* CheckPermission.swift */; };
 		432D596325A5AA680074DB29 /* SendToDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D596225A5AA680074DB29 /* SendToDBModel.swift */; };
+		4335065C25C3D2370097CC89 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335065B25C3D2370097CC89 /* TabBarController.swift */; };
+		4335065F25C3D40A0097CC89 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335065E25C3D40A0097CC89 /* ChatViewController.swift */; };
+		4335F91F25CBD85D0068429B /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335F91E25CBD85D0068429B /* RoomViewController.swift */; };
 		78A92212569B64528B00D82F /* Pods_Swift6ChatApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257523C7EC757E1106EE6A59 /* Pods_Swift6ChatApp1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		257523C7EC757E1106EE6A59 /* Pods_Swift6ChatApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift6ChatApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4305557125CE7A590001C9F2 /* roomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roomModel.swift; sourceTree = "<group>"; };
+		4323F6A225CA84F500D8A608 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4323F6A525CAA63D00D8A608 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		4323F6A625CAA63D00D8A608 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		432D593925A43C080074DB29 /* Swift6ChatApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift6ChatApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432D593C25A43C080074DB29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432D593E25A43C080074DB29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +45,9 @@
 		432D595925A589D80074DB29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		432D595F25A58AB50074DB29 /* CheckPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermission.swift; sourceTree = "<group>"; };
 		432D596225A5AA680074DB29 /* SendToDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDBModel.swift; sourceTree = "<group>"; };
+		4335065B25C3D2370097CC89 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4335065E25C3D40A0097CC89 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4335F91E25CBD85D0068429B /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		5D31ACF217BD33B86C2ABEB8 /* Pods-Swift6ChatApp1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp1.debug.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp1/Pods-Swift6ChatApp1.debug.xcconfig"; sourceTree = "<group>"; };
 		F509F25E380F0C1534E2C6CF /* Pods-Swift6ChatApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp1.release.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp1/Pods-Swift6ChatApp1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +90,8 @@
 				432D595E25A58A510074DB29 /* Model */,
 				432D595725A589180074DB29 /* Controller */,
 				432D594225A43C080074DB29 /* Main.storyboard */,
+				4323F6A525CAA63D00D8A608 /* MessageCell.swift */,
+				4323F6A625CAA63D00D8A608 /* MessageCell.xib */,
 				432D594525A43C0D0074DB29 /* Assets.xcassets */,
 				432D594725A43C0D0074DB29 /* LaunchScreen.storyboard */,
 				432D594A25A43C0D0074DB29 /* Info.plist */,
@@ -89,6 +105,9 @@
 			children = (
 				432D594025A43C080074DB29 /* ViewController.swift */,
 				432D595925A589D80074DB29 /* RegisterViewController.swift */,
+				4335065B25C3D2370097CC89 /* TabBarController.swift */,
+				4335065E25C3D40A0097CC89 /* ChatViewController.swift */,
+				4335F91E25CBD85D0068429B /* RoomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +117,8 @@
 			children = (
 				432D595F25A58AB50074DB29 /* CheckPermission.swift */,
 				432D596225A5AA680074DB29 /* SendToDBModel.swift */,
+				4323F6A225CA84F500D8A608 /* Message.swift */,
+				4305557125CE7A590001C9F2 /* roomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4323F6A825CAA63E00D8A608 /* MessageCell.xib in Resources */,
 				432D595425A461670074DB29 /* GoogleService-Info.plist in Resources */,
 				432D594925A43C0D0074DB29 /* LaunchScreen.storyboard in Resources */,
 				432D594625A43C0D0074DB29 /* Assets.xcassets in Resources */,
@@ -235,9 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				432D596025A58AB50074DB29 /* CheckPermission.swift in Sources */,
+				4323F6A725CAA63E00D8A608 /* MessageCell.swift in Sources */,
 				432D594125A43C080074DB29 /* ViewController.swift in Sources */,
+				4335065F25C3D40A0097CC89 /* ChatViewController.swift in Sources */,
+				4323F6A325CA84F500D8A608 /* Message.swift in Sources */,
 				432D593D25A43C080074DB29 /* AppDelegate.swift in Sources */,
+				4335F91F25CBD85D0068429B /* RoomViewController.swift in Sources */,
 				432D593F25A43C080074DB29 /* SceneDelegate.swift in Sources */,
+				4305557225CE7A590001C9F2 /* roomModel.swift in Sources */,
+				4335065C25C3D2370097CC89 /* TabBarController.swift in Sources */,
 				432D596325A5AA680074DB29 /* SendToDBModel.swift in Sources */,
 				432D595A25A589D80074DB29 /* RegisterViewController.swift in Sources */,
 			);
